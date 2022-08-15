@@ -1,4 +1,4 @@
-/node_modules/
+node_modules
 /.idea/
 /secrets.json
 /scripts/
@@ -6,4 +6,7 @@
 /build/
 /accoupts.json
 .env
-
+/artifacts/
+cache
+/contracts/artifacts
+artifacts/@openzeppelin
