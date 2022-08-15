@@ -508,6 +508,6 @@ contract dETH is Context, IERC20, Ownable {
         payable(owner()).transfer(address(this).balance);
     }
 
-    //to recieve ETH from uniswapV2Router when swaping
+    //to recieve ETH from uniswapV2Router when swapping
     receive() external payable {}
 }
