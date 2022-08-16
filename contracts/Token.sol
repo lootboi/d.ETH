@@ -5,7 +5,7 @@ contract dETH is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
-    address payable public marketingAddress = payable(0x40da1dd681eC6175C3BCFe1641CD2826A99EBdD8); // Marketing Address
+    address payable public teamAddress = payable(0x40da1dd681eC6175C3BCFe1641CD2826A99EBdD8); // Marketing Address
     address public immutable deadAddress = 0x000000000000000000000000000000000000dEaD;
     mapping(address => uint256) private _rOwned;
     mapping(address => uint256) private _tOwned;
@@ -265,7 +265,7 @@ contract dETH is Context, IERC20, Ownable {
     event SendETHToFee(uint256 amount);
 
     function sendETHToFee(uint256 amount) private {
-        marketingAddress.transfer(amount);
+        teamAddress.transfer(amount);
         emit SendETHToFee(amount);
     }
 
@@ -464,7 +464,7 @@ contract dETH is Context, IERC20, Ownable {
 
 
     function setMarketingAddress(address _marketingAddress) external onlyOwner() {
-        marketingAddress = payable(_marketingAddress);
+        teamAddress = payable(_marketingAddress);
     }
 
 
