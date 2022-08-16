@@ -27,8 +27,8 @@ contract dETH is Context, IERC20, Ownable {
     uint8 private _decimals = 9;
 
 
-    uint256 public _taxFee = 3; // 3%
-    uint256 private _previousTaxFee = _taxFee;
+    uint256 public _teamFee = 3; // 3%
+    uint256 private _previousTeamFee = _teamFee;
 
     uint256 public _liquidityFee = 6; // 6%
     uint256 private _previousLiquidityFee = _liquidityFee;
@@ -416,7 +416,7 @@ contract dETH is Context, IERC20, Ownable {
     }
 
     function calculateTaxFee(uint256 _amount) private view returns (uint256) {
-        return _amount.mul(_taxFee).div(
+        return _amount.mul(_teamFee).div(
             10 ** 2
         );
     }
@@ -428,17 +428,17 @@ contract dETH is Context, IERC20, Ownable {
     }
 
     function removeAllFee() private {
-        if (_taxFee == 0 && _liquidityFee == 0) return;
+        if (_teamFee == 0 && _liquidityFee == 0) return;
 
-        _previousTaxFee = _taxFee;
+        _previousTeamFee = _teamFee;
         _previousLiquidityFee = _liquidityFee;
 
-        _taxFee = 0;
+        _teamFee = 0;
         _liquidityFee = 0;
     }
 
     function restoreAllFee() private {
-        _taxFee = _previousTaxFee;
+        _teamFee = _previousTeamFee;
         _liquidityFee = _previousLiquidityFee;
     }
 
@@ -454,8 +454,8 @@ contract dETH is Context, IERC20, Ownable {
         _isExcludedFromFee[account] = false;
     }
 
-    function setTaxFeePercent(uint256 taxFee) external onlyOwner() {
-        _taxFee = taxFee;
+    function setTaxFeePercent(uint256 teamFee) external onlyOwner() {
+        _teamFee = teamFee;
     }
 
     function setLiquidityFeePercent(uint256 liquidityFee) external onlyOwner() {
