@@ -376,7 +376,7 @@ contract dETH is Context, IERC20, Ownable {
     }
 
     function _getTValues(uint256 tAmount) private view returns (uint256, uint256, uint256) {
-        uint256 tFee = calculateTaxFee(tAmount);
+        uint256 tFee = calculateTeamFee(tAmount);
         uint256 tLiquidity = calculateLiquidityFee(tAmount);
         uint256 tTransferAmount = tAmount.sub(tFee).sub(tLiquidity);
         return (tTransferAmount, tFee, tLiquidity);
@@ -415,7 +415,7 @@ contract dETH is Context, IERC20, Ownable {
             _tOwned[address(this)] = _tOwned[address(this)].add(tLiquidity);
     }
 
-    function calculateTaxFee(uint256 _amount) private view returns (uint256) {
+    function calculateTeamFee(uint256 _amount) private view returns (uint256) {
         return _amount.mul(_teamFee).div(
             10 ** 2
         );
