@@ -1,7 +1,7 @@
 pragma solidity ^0.6.12;
 // SPDX-License-Identifier: UNLICENSED
 import "./includes.sol";
-contract CronicShiba is Context, IERC20, Ownable {
+contract dETH is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -22,8 +22,8 @@ contract CronicShiba is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "CronicShiba";
-    string private _symbol = "CRONIC";
+    string private _name = "Degen ETH";
+    string private _symbol = "d.ETH";
     uint8 private _decimals = 9;
 
 
