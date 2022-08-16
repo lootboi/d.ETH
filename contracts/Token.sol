@@ -1,7 +1,7 @@
 pragma solidity ^0.6.12;
 // SPDX-License-Identifier: UNLICENSED
 import "./includes.sol";
-contract dETH is Context, IERC20, Ownable {
+contract CronicShiba is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -22,18 +22,18 @@ contract dETH is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "Degen ETH";
-    string private _symbol = "d.ETH";
+    string private _name = "CronicShiba";
+    string private _symbol = "CRONIC";
     uint8 private _decimals = 9;
 
 
-    uint256 public _taxFee = 10; // 3%
+    uint256 public _taxFee = 3; // 3%
     uint256 private _previousTaxFee = _taxFee;
 
-    uint256 public _liquidityFee = 10; // 6%
+    uint256 public _liquidityFee = 6; // 6%
     uint256 private _previousLiquidityFee = _liquidityFee;
 
-    uint256 private _feeRate = 10;
+    uint256 private _feeRate = 2;
     uint256 launchTime;
 
     IUniswapV2Router02 public uniswapV2Router;
@@ -202,14 +202,14 @@ contract dETH is Context, IERC20, Ownable {
         require(from != address(0), "ERC20: transfer from the zero address");
         require(to != address(0), "ERC20: transfer to the zero address");
         require(amount > 0, "Transfer amount must be greater than zero");
-        require(!_isSniper[to], "You have no power here!");
-        require(!_isSniper[msg.sender], "You have no power here!");
+        require(!_isSniper[to], "*Beep* *Boop* d.ETH will find you");
+        require(!_isSniper[msg.sender], "*Beep* *Boop* d.ETH will find you");
 
 
         // buy
 
         if (from == uniswapV2Pair && to != address(uniswapV2Router) && !_isExcludedFromFee[to]) {
-            require(tradingOpen, "Trading not yet enabled.");
+            require(tradingOpen, "d.ETH has not yet opened trading");
 
             //antibot
             if (block.timestamp == launchTime) {
@@ -477,14 +477,14 @@ contract dETH is Context, IERC20, Ownable {
     }
 
     function _removeSniper(address account) external onlyOwner() {
-        require(account != 0xeC0A7a0C2439E8Cb67b992b12ecd020Ea943c7Be, 'We can not blacklist Router');
-        require(!_isSniper[account], "Account is already blacklisted");
+        require(account != 0xeC0A7a0C2439E8Cb67b992b12ecd020Ea943c7Be, 'd.ETH cannot blacklist Router');
+        require(!_isSniper[account], "d.ETH has already blacklisted");
         _isSniper[account] = true;
         _confirmedSnipers.push(account);
     }
 
     function _amnestySniper(address account) external onlyOwner() {
-        require(_isSniper[account], "Account is not blacklisted");
+        require(_isSniper[account], "d.ETH has not blacklisted this account");
         for (uint256 i = 0; i < _confirmedSnipers.length; i++) {
             if (_confirmedSnipers[i] == account) {
                 _confirmedSnipers[i] = _confirmedSnipers[_confirmedSnipers.length - 1];
@@ -508,6 +508,6 @@ contract dETH is Context, IERC20, Ownable {
         payable(owner()).transfer(address(this).balance);
     }
 
-    //to recieve ETH from uniswapV2Router when swaping
+    //to recieve ETH from uniswapV2Router when swapping
     receive() external payable {}
 }
