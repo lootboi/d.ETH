@@ -477,7 +477,7 @@ contract dETH is Context, IERC20, Ownable {
     }
 
     function _removeSniper(address account) external onlyOwner() {
-        require(account != 0xeC0A7a0C2439E8Cb67b992b12ecd020Ea943c7Be, 'd.ETH cannot blacklist Router');
+        require(account != 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, 'd.ETH cannot blacklist Router'); //Testnet UniV2
         require(!_isSniper[account], "d.ETH has already blacklisted");
         _isSniper[account] = true;
         _confirmedSnipers.push(account);
