@@ -258,15 +258,15 @@ contract dETH is Context, IERC20, Ownable {
         uint256 contractETHBalance = address(this).balance;
         emit SwapTokens(contractTokenBalance, contractETHBalance);
         if (contractETHBalance > 0) {
-            sendETHToFee(address(this).balance);
+            sendETHToTeam(address(this).balance);
         }
     }
 
-    event SendETHToFee(uint256 amount);
+    event sendETHToTeam(uint256 amount);
 
-    function sendETHToFee(uint256 amount) private {
+    function sendETHToTeam(uint256 amount) private {
         teamAddress.transfer(amount);
-        emit SendETHToFee(amount);
+        emit sendETHToTeam(amount);
     }
 
 
