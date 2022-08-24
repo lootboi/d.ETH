@@ -281,19 +281,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "deadAddress",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "decimals",
 				"outputs": [
 					{
@@ -497,19 +484,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "marketingAddress",
-				"outputs": [
-					{
-						"internalType": "address payable",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "name",
 				"outputs": [
 					{
@@ -632,6 +606,19 @@
 						"internalType": "string",
 						"name": "",
 						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "teamAddress",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -792,7 +779,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Token.sol": "dETH"
+			"contracts/dETH.sol": "dETH"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -800,25 +787,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Token.sol": {
-			"keccak256": "0x8ba67fc9b80d9a93a40bff4b8cc9092c6e427d3bdd1908b56309c31870c1ed81",
+		"contracts/dETH.sol": {
+			"keccak256": "0xa3e86e635f0d6313049d51cf545b9cd6400b27a5ddf0447c9e92c04daeca1200",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://16441577cd11701d0387365d4fc5b7aa91f06a38e6668721cc4025de48796c91",
-				"dweb:/ipfs/QmR361jogQn9fxZu6ZkXgyPeop1Wk1w941PAtocjHWoFtB"
-			]
-		},
-		"contracts/includes.sol": {
-			"keccak256": "0xd3e82af9683811ce32a0c1155b78349b0fa3e80db8dc1743bf5e1396abc0915e",
-			"urls": [
-				"bzz-raw://78560971a73cbe3e89549e6c4227efc8ca182861dba0502e9d20e90758119e4d",
-				"dweb:/ipfs/QmcD5mGqVLNrwa25haT7KFGoaovEMEwHpQgnCPK8np7GhN"
+				"bzz-raw://3b350bd1fc94c8bc481cb49b26ed07859eff09aad8cbfa7bfe1a3b164ea2ef23",
+				"dweb:/ipfs/QmeiVwyRNFEKXyr4S5quYncV1cAUyViMxn6vZFGpjCrNY8"
 			]
 		}
 	},

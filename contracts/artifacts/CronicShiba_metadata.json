@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.6.12+commit.27d51765"
+		"version": "0.8.16+commit.07a7930e"
 	},
 	"language": "Solidity",
 	"output": {
@@ -274,19 +274,6 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "deadAddress",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -792,33 +779,26 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Token.sol": "CronicShiba"
+			"contracts/dETH.sol": "CronicShiba"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "london",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": true,
+			"enabled": false,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Token.sol": {
-			"keccak256": "0xab8cac5f25dfc661e43e0d5a44899bc8184ec98a189efe4a171005a3c48743bf",
+		"contracts/dETH.sol": {
+			"keccak256": "0xa8d2bc662895ed5bf5e66b4677e0e17bd8de967e394e35eb63d208a33dad5a81",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://8de1e032f86d903915d1ac67eb6d8579b5fa863887fef95b47eb17df8cdd6e56",
-				"dweb:/ipfs/QmNYBuPZ3NBeFRHULpsRa5CHuZ4Hs8hwszcj59ULs2LL5L"
-			]
-		},
-		"contracts/includes.sol": {
-			"keccak256": "0xd3e82af9683811ce32a0c1155b78349b0fa3e80db8dc1743bf5e1396abc0915e",
-			"urls": [
-				"bzz-raw://78560971a73cbe3e89549e6c4227efc8ca182861dba0502e9d20e90758119e4d",
-				"dweb:/ipfs/QmcD5mGqVLNrwa25haT7KFGoaovEMEwHpQgnCPK8np7GhN"
+				"bzz-raw://0b488146895e55bb137fae8144f54910370114b28373adcbeb1957024b0a2c30",
+				"dweb:/ipfs/QmPiSkoZqnGM5vBhEckZXRnCVooEVsYuEWmJpeYDnK8tAJ"
 			]
 		}
 	},
