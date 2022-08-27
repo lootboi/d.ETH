@@ -73,6 +73,31 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
+						"name": "amount0",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount1",
+						"type": "uint256"
+					}
+				],
+				"name": "Mint",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
 						"name": "amount0In",
 						"type": "uint256"
 					},
@@ -359,6 +384,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "mint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "liquidity",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "name",
 				"outputs": [
@@ -626,7 +670,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/dETH.sol": "IUniswapV2Pair"
+			"contracts/dethV3.sol": "IUniswapV2Pair"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -634,18 +678,18 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
-		"contracts/dETH.sol": {
-			"keccak256": "0xa3e86e635f0d6313049d51cf545b9cd6400b27a5ddf0447c9e92c04daeca1200",
-			"license": "UNLICENSED",
+		"contracts/dethV3.sol": {
+			"keccak256": "0x835821095090e6ceccdde07b5b6055dae816f54a6a627d50472431efad406dac",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://3b350bd1fc94c8bc481cb49b26ed07859eff09aad8cbfa7bfe1a3b164ea2ef23",
-				"dweb:/ipfs/QmeiVwyRNFEKXyr4S5quYncV1cAUyViMxn6vZFGpjCrNY8"
+				"bzz-raw://29573fad63a1c81fd3019094f225a11d022eecc17aed966b3335ca6a71261016",
+				"dweb:/ipfs/QmaEdwNWtJ2FW5YxxhiHqGKsRVpLvGzXB9653FxMUDLVUF"
 			]
 		}
 	},

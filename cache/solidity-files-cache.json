@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\17204\\d.ETH\\contracts\\Burna.sol": {
-      "lastModificationDate": 1660771245257,
-      "contentHash": "d6cfab60d54ff6fdae55bab21d8d8bc1",
+      "lastModificationDate": 1661556801758,
+      "contentHash": "2214d5cccf46aa035b611143391f0f37",
       "sourceName": "contracts/Burna.sol",
       "solcConfig": {
         "version": "0.6.12",
@@ -29,7 +29,8 @@
         }
       },
       "imports": [
-        "./dETH.sol"
+        "./dethV3.sol",
+        "./libs/Address.sol"
       ],
       "versionPragmas": [
         "^0.6.12"
@@ -38,10 +39,10 @@
         "Burna"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\dETH.sol": {
-      "lastModificationDate": 1660926982579,
-      "contentHash": "4f470e27146a85b3ab33cc9992b94c21",
-      "sourceName": "contracts/dETH.sol",
+    "C:\\Users\\17204\\d.ETH\\contracts\\dethV3.sol": {
+      "lastModificationDate": 1661556610508,
+      "contentHash": "36a17b16adad76117ec2be75eaf44e79",
+      "sourceName": "contracts/dethV3.sol",
       "solcConfig": {
         "version": "0.6.12",
         "settings": {
@@ -70,348 +71,24 @@
         "^0.6.12"
       ],
       "artifacts": [
-        "Address",
         "Context",
+        "DividendPayingToken",
+        "DividendPayingTokenInterface",
+        "DividendPayingTokenOptionalInterface",
+        "ERC20",
         "IERC20",
+        "IERC20Metadata",
         "IUniswapV2Factory",
         "IUniswapV2Pair",
         "IUniswapV2Router01",
         "IUniswapV2Router02",
+        "IterableMapping",
         "Ownable",
         "SafeMath",
-        "dETH"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
-      "lastModificationDate": 1660759182590,
-      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC20"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
-      "lastModificationDate": 1660759182461,
-      "contentHash": "c476b3895a94798b88a4bb97399e6dfe",
-      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "Address"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\ERC20.sol": {
-      "lastModificationDate": 1660758398105,
-      "contentHash": "8065b340476f61365c076897199425f1",
-      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-      "solcConfig": {
-        "version": "0.6.12",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../../utils/Context.sol",
-        "./IERC20.sol",
-        "../../math/SafeMath.sol"
-      ],
-      "versionPragmas": [
-        ">=0.6.0 <0.8.0"
-      ],
-      "artifacts": [
-        "ERC20"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
-      "lastModificationDate": 1660759182473,
-      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
-      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Context"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\libs\\IBEP20.sol": {
-      "lastModificationDate": 1660590218004,
-      "contentHash": "ad0b993025ba77f49dba3c9f6db94bd4",
-      "sourceName": "contracts/libs/IBEP20.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.6.4"
-      ],
-      "artifacts": [
-        "IBEP20"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\libs\\BEP20.sol": {
-      "lastModificationDate": 1660761101772,
-      "contentHash": "1c57c2128d1908763b1e84bbfbe413d7",
-      "sourceName": "contracts/libs/BEP20.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "@openzeppelin/contracts/utils/Context.sol",
-        "./IBEP20.sol",
-        "@openzeppelin/contracts/utils/math/SafeMath.sol"
-      ],
-      "versionPragmas": [
-        ">=0.4.0"
-      ],
-      "artifacts": [
-        "BEP20"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
-      "lastModificationDate": 1660759182635,
-      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
-      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Ownable"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\includes.sol": {
-      "lastModificationDate": 1660590218001,
-      "contentHash": "09d3acd6033c6f1ec241fce739136efc",
-      "sourceName": "contracts/includes.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": [
-        "Address",
-        "Context",
-        "IERC20",
-        "IUniswapV2Factory",
-        "IUniswapV2Pair",
-        "IUniswapV2Router01",
-        "IUniswapV2Router02",
-        "Ownable",
-        "SafeMath"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\libs\\AddrArrayLib.sol": {
-      "lastModificationDate": 1660590218002,
-      "contentHash": "adba01947c0ca7276edbc4b28cc1e532",
-      "sourceName": "contracts/libs/AddrArrayLib.sol",
-      "solcConfig": {
-        "version": "0.6.12",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "0.6.12"
-      ],
-      "artifacts": [
-        "AddrArrayLib"
+        "SafeMathInt",
+        "SafeMathUint",
+        "dETHDividendTracker",
+        "dETHV3"
       ]
     },
     "C:\\Users\\17204\\d.ETH\\contracts\\libs\\Address.sol": {
@@ -748,10 +425,10 @@
         "ERC20"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\libs\\Multicall.sol": {
-      "lastModificationDate": 1660590218004,
-      "contentHash": "fb2e95833d9bd591edbf75392a85ccd7",
-      "sourceName": "contracts/libs/Multicall.sol",
+    "C:\\Users\\17204\\d.ETH\\contracts\\dethV2.sol": {
+      "lastModificationDate": 1661556988874,
+      "contentHash": "cbe5400914df2b7c402f8a1e26ed51e1",
+      "sourceName": "contracts/dethV2.sol",
       "solcConfig": {
         "version": "0.8.1",
         "settings": {
@@ -776,122 +453,13 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "Multicall"
-      ]
+      "versionPragmas": [],
+      "artifacts": []
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\libs\\ReentrancyGuard.sol": {
-      "lastModificationDate": 1660590218005,
-      "contentHash": "750c18d629ffcf97bc0967bfb5d04eb4",
-      "sourceName": "contracts/libs/ReentrancyGuard.sol",
-      "solcConfig": {
-        "version": "0.6.12",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "0.6.12"
-      ],
-      "artifacts": [
-        "ReentrancyGuard"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\Migrations.sol": {
-      "lastModificationDate": 1660590217881,
-      "contentHash": "bc5d2a325acfd4a12ab9dec54e57b59e",
-      "sourceName": "contracts/Migrations.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.4.22 <0.9.0"
-      ],
-      "artifacts": [
-        "Migrations"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\interfaces\\IERC20.sol": {
-      "lastModificationDate": 1660590218008,
-      "contentHash": "c59d2460003cab90d07a47e99210430a",
-      "sourceName": "contracts/mock/interfaces/IERC20.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "IERC20Uniswap"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\UniswapV2Router02.sol": {
-      "lastModificationDate": 1660590218008,
+    "C:\\Users\\17204\\d.ETH\\contracts\\UniswapV2Router02.sol": {
+      "lastModificationDate": 1661533745330,
       "contentHash": "63106d6df95e99aac700647c7e194809",
-      "sourceName": "contracts/mock/UniswapV2Router02.sol",
+      "sourceName": "contracts/UniswapV2Router02.sol",
       "solcConfig": {
         "version": "0.6.12",
         "settings": {
@@ -931,10 +499,10 @@
         "UniswapV2Router02"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\libraries\\UniswapV2Library.sol": {
-      "lastModificationDate": 1660590218012,
-      "contentHash": "77be56be1218c498ddfea47430d04f52",
-      "sourceName": "contracts/mock/libraries/UniswapV2Library.sol",
+    "C:\\Users\\17204\\d.ETH\\contracts\\libraries\\UniswapV2Library.sol": {
+      "lastModificationDate": 1661532650145,
+      "contentHash": "1f65ef3358f975d1dd23e05241f9817f",
+      "sourceName": "contracts/libraries/UniswapV2Library.sol",
       "solcConfig": {
         "version": "0.6.12",
         "settings": {
@@ -969,10 +537,10 @@
         "UniswapV2Library"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\libraries\\SafeMath.sol": {
+    "C:\\Users\\17204\\d.ETH\\contracts\\libraries\\SafeMath.sol": {
       "lastModificationDate": 1660590218011,
       "contentHash": "388a77b0efd99665990de3d1d7769361",
-      "sourceName": "contracts/mock/libraries/SafeMath.sol",
+      "sourceName": "contracts/libraries/SafeMath.sol",
       "solcConfig": {
         "version": "0.6.12",
         "settings": {
@@ -1004,221 +572,9 @@
         "SafeMathUniswap"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\libraries\\TransferHelper.sol": {
-      "lastModificationDate": 1660590218011,
-      "contentHash": "083734ee16f8ba8dad8f0365146d02c1",
-      "sourceName": "contracts/mock/libraries/TransferHelper.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.6.0"
-      ],
-      "artifacts": [
-        "TransferHelper"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\interfaces\\IUniswapV2Router02.sol": {
-      "lastModificationDate": 1660590218010,
-      "contentHash": "296cab241a2738fbd4744b3d6df6cc1d",
-      "sourceName": "contracts/mock/interfaces/IUniswapV2Router02.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IUniswapV2Router01.sol"
-      ],
-      "versionPragmas": [
-        ">=0.6.2"
-      ],
-      "artifacts": [
-        "IUniswapV2Router02"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\interfaces\\IUniswapV2Factory.sol": {
-      "lastModificationDate": 1660590218009,
-      "contentHash": "203979e9e22c7615a3acf56e0e7fc5ae",
-      "sourceName": "contracts/mock/interfaces/IUniswapV2Factory.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "IUniswapV2Factory"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\interfaces\\IWETH.sol": {
-      "lastModificationDate": 1660590218010,
-      "contentHash": "95f3d805624a7ecd9787cb4ba15c15cb",
-      "sourceName": "contracts/mock/interfaces/IWETH.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "IWETH"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\interfaces\\IUniswapV2Pair.sol": {
-      "lastModificationDate": 1660590218009,
-      "contentHash": "f18f90ad77859144011557d9109090fb",
-      "sourceName": "contracts/mock/interfaces/IUniswapV2Pair.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "IUniswapV2Pair"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\interfaces\\IUniswapV2Router01.sol": {
-      "lastModificationDate": 1660590218010,
-      "contentHash": "f375bc2fd7759bc42b346cabd017b3ef",
-      "sourceName": "contracts/mock/interfaces/IUniswapV2Router01.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.6.2"
-      ],
-      "artifacts": [
-        "IUniswapV2Router01"
-      ]
-    },
     "C:\\Users\\17204\\d.ETH\\contracts\\mock\\UniswapV2Pair.sol": {
-      "lastModificationDate": 1660590218008,
-      "contentHash": "9cc7d17136b75afe3fabdc16600b1022",
+      "lastModificationDate": 1661487667553,
+      "contentHash": "af8cfcc13abfcc130ad9eb59344b63f6",
       "sourceName": "contracts/mock/UniswapV2Pair.sol",
       "solcConfig": {
         "version": "0.6.12",
@@ -1245,11 +601,11 @@
       },
       "imports": [
         "./UniswapV2ERC20.sol",
-        "./libraries/Math.sol",
-        "./libraries/UQ112x112.sol",
-        "./interfaces/IERC20.sol",
-        "./interfaces/IUniswapV2Factory.sol",
-        "./interfaces/IUniswapV2Callee.sol"
+        "../libraries/Math.sol",
+        "../libraries/UQ112x112.sol",
+        "../interfaces/IERC20.sol",
+        "../interfaces/IUniswapV2Factory.sol",
+        "../interfaces/IUniswapV2Callee.sol"
       ],
       "versionPragmas": [
         "=0.6.12"
@@ -1259,8 +615,8 @@
       ]
     },
     "C:\\Users\\17204\\d.ETH\\contracts\\mock\\UniswapV2ERC20.sol": {
-      "lastModificationDate": 1660590218007,
-      "contentHash": "af7ede155c14796235affbdeaddd87d9",
+      "lastModificationDate": 1661487561130,
+      "contentHash": "cc21accb2d311fa5fe8ffbfa1fabda80",
       "sourceName": "contracts/mock/UniswapV2ERC20.sol",
       "solcConfig": {
         "version": "0.6.12",
@@ -1286,7 +642,7 @@
         }
       },
       "imports": [
-        "./libraries/SafeMath.sol"
+        "../libraries/SafeMath.sol"
       ],
       "versionPragmas": [
         "=0.6.12"
@@ -1295,10 +651,10 @@
         "UniswapV2ERC20"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\libraries\\Math.sol": {
+    "C:\\Users\\17204\\d.ETH\\contracts\\libraries\\Math.sol": {
       "lastModificationDate": 1660590218011,
       "contentHash": "ae061bd64baf1cbc2e61c13ff03a253f",
-      "sourceName": "contracts/mock/libraries/Math.sol",
+      "sourceName": "contracts/libraries/Math.sol",
       "solcConfig": {
         "version": "0.6.12",
         "settings": {
@@ -1330,10 +686,10 @@
         "Math"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\libraries\\UQ112x112.sol": {
+    "C:\\Users\\17204\\d.ETH\\contracts\\libraries\\UQ112x112.sol": {
       "lastModificationDate": 1660590218011,
       "contentHash": "15ac1510dd9711b0134301bc1d8527e2",
-      "sourceName": "contracts/mock/libraries/UQ112x112.sol",
+      "sourceName": "contracts/libraries/UQ112x112.sol",
       "solcConfig": {
         "version": "0.6.12",
         "settings": {
@@ -1365,45 +721,10 @@
         "UQ112x112"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\interfaces\\IUniswapV2Callee.sol": {
-      "lastModificationDate": 1660590218009,
-      "contentHash": "dee30d5845c0662c462da74fbe109539",
-      "sourceName": "contracts/mock/interfaces/IUniswapV2Callee.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "IUniswapV2Callee"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\UniswapV2Factory.sol": {
-      "lastModificationDate": 1660590218007,
-      "contentHash": "92f336a3ecb34eee94f27a01092e139a",
-      "sourceName": "contracts/mock/UniswapV2Factory.sol",
+    "C:\\Users\\17204\\d.ETH\\contracts\\UniswapV2Factory.sol": {
+      "lastModificationDate": 1661533722252,
+      "contentHash": "8e6098f08bbb7819892061e1d416b5f0",
+      "sourceName": "contracts/UniswapV2Factory.sol",
       "solcConfig": {
         "version": "0.6.12",
         "settings": {
@@ -1428,8 +749,8 @@
         }
       },
       "imports": [
-        "./interfaces/IUniswapV2Factory.sol",
-        "./UniswapV2Pair.sol"
+        "./interfaces/IERC20.sol",
+        "./mock/UniswapV2Pair.sol"
       ],
       "versionPragmas": [
         "=0.6.12"
@@ -1438,45 +759,10 @@
         "UniswapV2Factory"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\interfaces\\IUniswapV2ERC20.sol": {
-      "lastModificationDate": 1660590218009,
-      "contentHash": "cd66712b243d446a49daa674a92c7dc4",
-      "sourceName": "contracts/mock/interfaces/IUniswapV2ERC20.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "IUniswapV2ERC20"
-      ]
-    },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\libraries\\WMATIC.sol": {
+    "C:\\Users\\17204\\d.ETH\\contracts\\libraries\\WMATIC.sol": {
       "lastModificationDate": 1660590218012,
       "contentHash": "c292be7b35fca4f56d8c9a6e9d958499",
-      "sourceName": "contracts/mock/libraries/WMATIC.sol",
+      "sourceName": "contracts/libraries/WMATIC.sol",
       "solcConfig": {
         "version": "0.6.12",
         "settings": {
@@ -1508,12 +794,12 @@
         "WSDN"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\Multicall.sol": {
-      "lastModificationDate": 1660590218007,
-      "contentHash": "c6e84fd89b0dcb39c481fdb1bb12d0df",
-      "sourceName": "contracts/mock/Multicall.sol",
+    "C:\\Users\\17204\\d.ETH\\contracts\\libs\\AddrArrayLib.sol": {
+      "lastModificationDate": 1660590218002,
+      "contentHash": "adba01947c0ca7276edbc4b28cc1e532",
+      "sourceName": "contracts/libs/AddrArrayLib.sol",
       "solcConfig": {
-        "version": "0.8.1",
+        "version": "0.6.12",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -1537,16 +823,51 @@
       },
       "imports": [],
       "versionPragmas": [
-        ">=0.5.0"
+        "0.6.12"
       ],
       "artifacts": [
-        "Multicall"
+        "AddrArrayLib"
       ]
     },
-    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SafeMath.sol": {
-      "lastModificationDate": 1660759182648,
-      "contentHash": "2337f0279507b5edf14a07067adf0d05",
-      "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
+    "C:\\Users\\17204\\d.ETH\\contracts\\libs\\ReentrancyGuard.sol": {
+      "lastModificationDate": 1660590218005,
+      "contentHash": "750c18d629ffcf97bc0967bfb5d04eb4",
+      "sourceName": "contracts/libs/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.6.12",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.6.12"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\dETH.sol": {
+      "lastModificationDate": 1661556622191,
+      "contentHash": "05b116ee0f9b200aa49b97f09d7536f0",
+      "sourceName": "contracts/dETH.sol",
       "solcConfig": {
         "version": "0.8.1",
         "settings": {
@@ -1571,15 +892,11 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "SafeMath"
-      ]
+      "versionPragmas": [],
+      "artifacts": []
     },
     "C:\\Users\\17204\\d.ETH\\contracts\\dETHRewardsPools.sol": {
-      "lastModificationDate": 1660772421146,
+      "lastModificationDate": 1661462881162,
       "contentHash": "fd4ebafdff74a03949d5f2834407e966",
       "sourceName": "contracts/dETHRewardsPools.sol",
       "solcConfig": {
@@ -1691,6 +1008,76 @@
         "SafeERC20"
       ]
     },
+    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SafeMath.sol": {
+      "lastModificationDate": 1660759182648,
+      "contentHash": "2337f0279507b5edf14a07067adf0d05",
+      "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
+      "lastModificationDate": 1660759182590,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
     "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\draft-IERC20Permit.sol": {
       "lastModificationDate": 1660759182498,
       "contentHash": "fb77f144244b9ab12533aa6ce85ef8c5",
@@ -1725,6 +1112,676 @@
       "artifacts": [
         "IERC20Permit"
       ]
+    },
+    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1660759182461,
+      "contentHash": "c476b3895a94798b88a4bb97399e6dfe",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\libs\\BEP20.sol": {
+      "lastModificationDate": 1660761101772,
+      "contentHash": "1c57c2128d1908763b1e84bbfbe413d7",
+      "sourceName": "contracts/libs/BEP20.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/Context.sol",
+        "./IBEP20.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.4.0"
+      ],
+      "artifacts": [
+        "BEP20"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
+      "lastModificationDate": 1660759182635,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1660759182473,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\libs\\IBEP20.sol": {
+      "lastModificationDate": 1660590218004,
+      "contentHash": "ad0b993025ba77f49dba3c9f6db94bd4",
+      "sourceName": "contracts/libs/IBEP20.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.4"
+      ],
+      "artifacts": [
+        "IBEP20"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\interfaces\\IERC20.sol": {
+      "lastModificationDate": 1660590218008,
+      "contentHash": "c59d2460003cab90d07a47e99210430a",
+      "sourceName": "contracts/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IERC20Uniswap"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\interfaces\\IWETH.sol": {
+      "lastModificationDate": 1660590218010,
+      "contentHash": "95f3d805624a7ecd9787cb4ba15c15cb",
+      "sourceName": "contracts/interfaces/IWETH.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IWETH"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\interfaces\\IUniswapV2Factory.sol": {
+      "lastModificationDate": 1660590218009,
+      "contentHash": "203979e9e22c7615a3acf56e0e7fc5ae",
+      "sourceName": "contracts/interfaces/IUniswapV2Factory.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IUniswapV2Factory"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\interfaces\\IUniswapV2Callee.sol": {
+      "lastModificationDate": 1660590218009,
+      "contentHash": "dee30d5845c0662c462da74fbe109539",
+      "sourceName": "contracts/interfaces/IUniswapV2Callee.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IUniswapV2Callee"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\interfaces\\IUniswapV2Pair.sol": {
+      "lastModificationDate": 1660590218009,
+      "contentHash": "f18f90ad77859144011557d9109090fb",
+      "sourceName": "contracts/interfaces/IUniswapV2Pair.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IUniswapV2Pair"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\interfaces\\IUniswapV2Router02.sol": {
+      "lastModificationDate": 1660590218010,
+      "contentHash": "296cab241a2738fbd4744b3d6df6cc1d",
+      "sourceName": "contracts/interfaces/IUniswapV2Router02.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IUniswapV2Router01.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router02"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\interfaces\\IUniswapV2Router01.sol": {
+      "lastModificationDate": 1660590218010,
+      "contentHash": "f375bc2fd7759bc42b346cabd017b3ef",
+      "sourceName": "contracts/interfaces/IUniswapV2Router01.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router01"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\libraries\\TransferHelper.sol": {
+      "lastModificationDate": 1660590218011,
+      "contentHash": "083734ee16f8ba8dad8f0365146d02c1",
+      "sourceName": "contracts/libraries/TransferHelper.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "TransferHelper"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\interfaces\\IUniswapV2ERC20.sol": {
+      "lastModificationDate": 1660590218009,
+      "contentHash": "cd66712b243d446a49daa674a92c7dc4",
+      "sourceName": "contracts/interfaces/IUniswapV2ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IUniswapV2ERC20"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\libs\\Multicall.sol": {
+      "lastModificationDate": 1660590218004,
+      "contentHash": "fb2e95833d9bd591edbf75392a85ccd7",
+      "sourceName": "contracts/libs/Multicall.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "Multicall"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\Migrations.sol": {
+      "lastModificationDate": 1660590217881,
+      "contentHash": "bc5d2a325acfd4a12ab9dec54e57b59e",
+      "sourceName": "contracts/Migrations.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "Migrations"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\Multicall.sol": {
+      "lastModificationDate": 1660590218007,
+      "contentHash": "c6e84fd89b0dcb39c481fdb1bb12d0df",
+      "sourceName": "contracts/mock/Multicall.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "Multicall"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\mock\\WETH9.sol": {
+      "lastModificationDate": 1661488576811,
+      "contentHash": "a9f2b44bc30380dee1e214ed9a245817",
+      "sourceName": "contracts/mock/WETH9.sol",
+      "solcConfig": {
+        "version": "0.4.18",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.4.18"
+      ],
+      "artifacts": [
+        "WETH9"
+      ]
+    },
+    "C:\\Users\\17204\\d.ETH\\contracts\\IterableMapping.sol": {
+      "lastModificationDate": 1661557003364,
+      "contentHash": "c910616daa2b1d4bc4e544470315e9c8",
+      "sourceName": "contracts/IterableMapping.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
     }
   }
 }

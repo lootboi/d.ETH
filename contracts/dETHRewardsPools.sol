@@ -53,9 +53,9 @@ contract dETHRewardPools {
     uint256 public poolEndTime;
 
     // MAINNET
-    uint256 public dethPerSecond = 0.0035225443 ether; // 35k d.ETH / (365 * 24h * 60min * 60s)
-    uint256 public runningTime = 115 days; // 1 year
-    uint256 public constant TOTAL_REWARDS = 4000000 ether;
+    uint256 public dethPerSecond = 0.399106002554278 ether; // 35k d.ETH / ( 24h * 60min * 60s)
+    uint256 public runningTime = 145 days; // 1 years
+    uint256 public constant TOTAL_REWARDS = 5000000 ether;
     uint16 depositFeeBP;
     // END MAINNET
 

@@ -270,26 +270,34 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
 		"contracts/Burna.sol": {
-			"keccak256": "0xd360b611193965e95f4c3bbced952d04a781a6f238d5ef6c956a29de8bcd0ab2",
+			"keccak256": "0x2eaf8eab9754898f2f71c1c987b4151a21b7db3de0b8e53bb98d760b26bc8a29",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://dd700f813ee043f2cd54ce1880af497426225ed8801965d2786fe4fb923c8853",
-				"dweb:/ipfs/QmR92C9gDiT6w6wFSKQB64Tq1MJY1SDrmwPrBGwL5QrnFh"
+				"bzz-raw://87601edb486c9511e4cc250926ea8e6bc7ca14019c98bbf116cad07440c95cdf",
+				"dweb:/ipfs/QmbMdb7tMjGNhVGmHfTudPxfPUEkcukrPLknWspXKgZVED"
 			]
 		},
-		"contracts/dETH.sol": {
-			"keccak256": "0xa0c57ca853e2fc17e2a1f8659b1cbc73251e13575aaa203a1a4e42f913081534",
-			"license": "UNLICENSED",
+		"contracts/dethV3.sol": {
+			"keccak256": "0x835821095090e6ceccdde07b5b6055dae816f54a6a627d50472431efad406dac",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://71c098b789ec2afc8c17f8a652d9dcdd467aa04ca70df105b3d6e37eed099618",
-				"dweb:/ipfs/Qma6byrCT1pUMpH28XfMmPPjtRYhp4kRfCMEdx8mxoEMwn"
+				"bzz-raw://29573fad63a1c81fd3019094f225a11d022eecc17aed966b3335ca6a71261016",
+				"dweb:/ipfs/QmaEdwNWtJ2FW5YxxhiHqGKsRVpLvGzXB9653FxMUDLVUF"
+			]
+		},
+		"contracts/libs/Address.sol": {
+			"keccak256": "0xc107b6d6f3c472b941513fddcba22ac349b7d1fc2ffebf811fd1710b4ea70bea",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://108af60972bc359aa631f392bd4b69d73726aa0356aa077b459f35cff0bf1c99",
+				"dweb:/ipfs/QmSQCYqiR1uZ9xNB4BUmZsREBy2XduF4SpURUfUCkEECEM"
 			]
 		}
 	},

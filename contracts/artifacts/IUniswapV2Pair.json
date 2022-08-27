@@ -57,6 +57,7 @@
 			"getReserves()": "0902f1ac",
 			"initialize(address,address)": "485cc955",
 			"kLast()": "7464fc3d",
+			"mint(address)": "6a627842",
 			"name()": "06fdde03",
 			"nonces(address)": "7ecebe00",
 			"permit(address,address,uint256,uint256,uint8,bytes32,bytes32)": "d505accf",
@@ -128,6 +129,31 @@
 				}
 			],
 			"name": "Burn",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "sender",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "amount0",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "amount1",
+					"type": "uint256"
+				}
+			],
+			"name": "Mint",
 			"type": "event"
 		},
 		{
@@ -425,6 +451,25 @@
 				}
 			],
 			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "to",
+					"type": "address"
+				}
+			],
+			"name": "mint",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "liquidity",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{

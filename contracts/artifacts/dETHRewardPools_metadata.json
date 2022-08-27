@@ -645,11 +645,11 @@
 			]
 		},
 		"contracts/dETHRewardsPools.sol": {
-			"keccak256": "0x51ee889ef483736664a55f8772cf50f8d50f0cab54bc2cee1f61c9516b25a272",
+			"keccak256": "0xaadc3c0d8547c7cc0bf847d977dbdaadec15f04b71f29b15655cd790c6e207a9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://76a557d34082ad24056b5ca3eadfda4f03d85720fa900f872114f0724e9596fd",
-				"dweb:/ipfs/QmaGpLYSBhhFMMJq6mmMNKNgWByx7Gde5wU2Rdxqy926oR"
+				"bzz-raw://fed05bb43af7133a3df0f33b1c56346865823e9068ce97226152a386f59ea6dd",
+				"dweb:/ipfs/QmQ86Uc1fVJpmMmqayWJQFphk83bQxyvfDBffCcmW67uiF"
 			]
 		}
 	},

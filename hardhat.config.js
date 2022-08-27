@@ -36,6 +36,14 @@ module.exports = {
           enabled: true,
           runs: 200
         }}
+     },
+     {
+      version: "0.4.18",
+      settings: {
+        optimizer: {
+          enabled: true,
+          runs: 200
+        }}
      }]
   },
   etherscan: {
@@ -45,7 +53,15 @@ module.exports = {
     rinkeby: {
       url: API_URL,
       accounts: [PRIVATE_KEY],
-    }
+    },
+    "optimism": {
+      url: "https://opt-mainnet.g.alchemy.com/v2/uDuoiyooklIVZhfbuF52wYZgnNHysjXU",
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    "optimistic-goerli": {
+      url: "https://opt-goerli.g.alchemy.com/v2/KwajuzZGGjgNFbcQYc6I83pSLZf7gz-G",
+      accounts: [process.env.PRIVATE_KEY],
+    },
   },
   gasReporter: {
     enabled: true,

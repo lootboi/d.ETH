@@ -2,7 +2,8 @@
 
 pragma solidity ^0.6.12;
 
-import "./dETH.sol";
+import "./dethV3.sol";
+import "./libs/Address.sol";
 
 /*
  ______  _     _  ______ __   _ _______
@@ -15,7 +16,7 @@ contract Burna is Ownable {
     using SafeMath for uint256;
     using Address for address;
 
-    dETH deth;
+    dETHV3 deth;
 
     address public immutable deadAddress = 0x000000000000000000000000000000000000dEaD;
     address public dethAddress;
@@ -27,7 +28,7 @@ contract Burna is Ownable {
     event dethBurned(uint256 _amount, uint256 _time);
 
     constructor(address payable _deth, uint256 _startTime) public {
-        deth = dETH(_deth);
+        deth = dETHV3(_deth);
         dethAddress = _deth;
         startTime = _startTime;
         lastTimeBurned = startTime;
